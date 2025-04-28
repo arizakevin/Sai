@@ -55,7 +55,7 @@ Sai is your versatile multi-model AI assistant that seamlessly integrates with y
 
 ## Usage
 
-1. Simply mention @Prompty in any channel
+1. Simply mention @sai in any channel
 2. Ask your question or request assistance
 3. Get instant, thoughtful responses right in your thread
 
