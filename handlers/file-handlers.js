@@ -31,7 +31,7 @@ async function handleAnalyzeCommand({ command, ack, respond, client }) {
             type: "section",
             text: {
               type: "mrkdwn",
-              text: "The `/analyze` command cannot be used in threads. Instead, you can:\n1️⃣ Upload the file in the main channel and mention me (@GPT)\n2️⃣ Send me the file in a direct message",
+              text: "The `/analyze` command cannot be used in threads. Instead, you can:\n1️⃣ Upload the file in the main channel and mention me (@SAI)\n2️⃣ Send me the file in a direct message",
             },
           },
         ],

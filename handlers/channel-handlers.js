@@ -5,7 +5,7 @@ async function handleMemberJoinedChannel({ event, client }) {
     if (event.user === auth.user_id) {
       await client.chat.postMessage({
         channel: event.channel,
-        text: "👋 Hello! I've joined the channel and am ready to help. You can mention me (@GPT) with any questions or use my commands like `/ask`, `/analyze`, or `/diagram`!",
+        text: "👋 Hello! I've joined the channel and am ready to help. You can mention me (@SAI) with any questions or use my commands like `/ask`, `/analyze`, or `/diagram`!",
       });
     }
   } catch (error) {

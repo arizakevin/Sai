@@ -79,7 +79,7 @@ app.message(async ({ message, say, client }) => {
     const auth = await client.auth.test();
     const botUserId = auth.user_id;
     const isDM = message.channel_type === "im";
-    const mentionRegex = new RegExp(`<@${botUserId}>|@GPT|GPT for Slack`, "i");
+    const mentionRegex = new RegExp(`<@${botUserId}>|@SAI`, "i");
     const isMentioned = message.text && mentionRegex.test(message.text);
 
     if (!isDM && !isMentioned) return;
@@ -238,7 +238,7 @@ app.view(/.*/, viewLoggingMiddleware);
 (async () => {
   try {
     await app.start(process.env.PORT || 3000);
-    console.log("⚡️ GPT for Slack app is running!");
+    console.log("⚡️ SAI app is running!");
     console.log("🔌 Socket Mode is enabled");
     console.log("🎨 Multimodal support enabled");
     console.log("📊 Mermaid diagrams support enabled");
