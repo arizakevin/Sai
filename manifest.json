@@ -1,0 +1,157 @@
+{
+  "display_information": {
+    "name": "Sai",
+    "description": "AI assistant directly into your Slack workspace",
+    "background_color": "#000000",
+    "long_description": "Prompty is your versatile multi-model AI assistant that seamlessly integrates with your Slack workspace.\r\n\r\nKey Features:\r\n• Flexible Models: Connect to various AI systems including GPT and self-hosted Ollama models\r\n• Instant Answers: Get quick responses to your questions in any channel\r\n• Context-Aware: Maintains conversation threads for coherent discussions\r\n• Natural Language: Communicate naturally as you would with a team member\r\n• Versatile Assistance:\r\n\r\n- Answer questions and provide explanations\r\n- Help with code and technical queries\r\n- Assist with writing and editing\r\n- Summarize text and discussions\r\n- Analyze files and images\r\n\r\nHow to Use:\r\n\r\n1. Simply mention @Prompty in any channel\r\n2. Ask your question or request assistance\r\n3. Get instant, thoughtful responses right in your thread\r\n\r\nPerfect for:\r\n\r\n• Development teams needing quick code explanations\r\n• Writers seeking editorial assistance\r\n• Teams looking for quick answers to questions\r\n• Organizations wanting to leverage both cloud and self-hosted AI models\r\n• Anyone wanting powerful AI assistance within their Slack workflow\r\n\r\nBuilt by Kevin Ariza. The assistant maintains conversation context within threads and provides detailed, helpful responses while staying within your Slack workflow."
+  },
+  "features": {
+    "app_home": {
+      "home_tab_enabled": true,
+      "messages_tab_enabled": true,
+      "messages_tab_read_only_enabled": false
+    },
+    "bot_user": {
+      "display_name": "Sai",
+      "always_online": true
+    },
+    "shortcuts": [
+      {
+        "name": "Ask GPT",
+        "type": "global",
+        "callback_id": "ask_gpt_shortcut",
+        "description": "Quick access to GPT assistance - ask questions, get explanations, or help with any task directly in a private conversation"
+      },
+      {
+        "name": "Writing Assistant",
+        "type": "global",
+        "callback_id": "writing_assistant_shortcut",
+        "description": "Get help with writing emails, messages, documentation, or any text. Improve tone, clarity, and professionalism with AI-powered writing suggestions."
+      },
+      {
+        "name": "Summarize Text",
+        "type": "message",
+        "callback_id": "summarize_text_shortcut",
+        "description": "Instantly summarize long texts, conversations, or documents into clear and concise key points. Perfect for meeting notes, discussions, or articles."
+      },
+      {
+        "name": "Simplify Code",
+        "type": "message",
+        "callback_id": "simplify_code_shortcut",
+        "description": "Refactor and simplify complex code snippets. Get suggestions for cleaner, more maintainable code while preserving functionality."
+      },
+      {
+        "name": "Explain Code",
+        "type": "message",
+        "callback_id": "explain_code_shortcut",
+        "description": "Get detailed explanations of code snippets, functions, or entire files. Understand how code works with clear, step-by-step breakdowns and examples."
+      }
+    ],
+    "slash_commands": [
+      {
+        "command": "/ask",
+        "description": "Ask GPT any question directly",
+        "usage_hint": "[your question here]",
+        "should_escape": false
+      },
+      {
+        "command": "/explain",
+        "description": "Get an explanation of code snippets",
+        "usage_hint": "paste your code here",
+        "should_escape": false
+      },
+      {
+        "command": "/improve",
+        "description": "Improve or rewrite text",
+        "usage_hint": "paste text to improve",
+        "should_escape": false
+      },
+      {
+        "command": "/diagram",
+        "description": "Generate a diagram from text description",
+        "usage_hint": "[description] e.g., sequence diagram for login",
+        "should_escape": false
+      },
+      {
+        "command": "/analyze",
+        "description": "Analyze images or PDF files",
+        "usage_hint": "Upload a file to analyze",
+        "should_escape": false
+      }
+    ],
+    "assistant_view": {
+      "assistant_description": "A powerful AI assistant powered by GPT that helps answer questions, provide explanations, and assist with various tasks directly in Slack.",
+      "suggested_prompts": [
+        {
+          "title": "Ask a Question",
+          "message": "Ask me anything! I can help with explanations, analysis, coding questions, or general knowledge. Just type your question and I'll provide a detailed response."
+        },
+        {
+          "title": "Code Help",
+          "message": "Need help with code? Share your code snippet or describe what you're trying to achieve. I can help with debugging, optimization, or explaining how the code works."
+        },
+        {
+          "title": "Summarize Text",
+          "message": "Share any text, document, or conversation that you'd like me to summarize. I'll provide a clear and concise summary of the key points."
+        },
+        {
+          "title": "Writing Assistant",
+          "message": "Need help with writing? I can help draft, edit, or improve emails, messages, documentation, or other text. Just share what you'd like help with."
+        }
+      ]
+    }
+  },
+  "oauth_config": {
+    "scopes": {
+      "bot": [
+        "app_mentions:read",
+        "assistant:write",
+        "channels:history",
+        "channels:read",
+        "chat:write",
+        "chat:write.public",
+        "commands",
+        "files:read",
+        "files:write",
+        "groups:history",
+        "groups:read",
+        "im:history",
+        "im:read",
+        "im:write",
+        "mpim:read",
+        "reactions:read",
+        "reactions:write",
+        "remote_files:read",
+        "remote_files:share",
+        "remote_files:write",
+        "channels:join"
+      ]
+    }
+  },
+  "settings": {
+    "event_subscriptions": {
+      "bot_events": [
+        "app_mention",
+        "assistant_thread_context_changed",
+        "assistant_thread_started",
+        "channel_archive",
+        "channel_created",
+        "channel_deleted",
+        "channel_left",
+        "channel_rename",
+        "channel_unarchive",
+        "file_shared",
+        "member_joined_channel",
+        "message.channels",
+        "message.groups",
+        "message.im"
+      ]
+    },
+    "interactivity": {
+      "is_enabled": true
+    },
+    "org_deploy_enabled": false,
+    "socket_mode_enabled": true,
+    "token_rotation_enabled": false
+  }
+}
