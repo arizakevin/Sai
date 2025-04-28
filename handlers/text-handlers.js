@@ -688,7 +688,7 @@ async function handleAskModal({ ack, body, view, client }) {
   }
 }
 
-// Handle ask GPT shortcut
+// Handle ask Sai shortcut
 async function handleAskShortcut({ shortcut, ack, client }) {
   try {
     await ack();
@@ -699,7 +699,7 @@ async function handleAskShortcut({ shortcut, ack, client }) {
         callback_id: "ask_modal",
         title: {
           type: "plain_text",
-          text: "Ask GPT",
+          text: "Ask Sai",
         },
         submit: {
           type: "plain_text",

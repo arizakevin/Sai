@@ -61,7 +61,7 @@ Sai is your versatile multi-model AI assistant that seamlessly integrates with y
 
 ### Available Commands
 
-- `/ask` - Ask GPT any question directly
+- `/ask` - Ask Sai any question directly
 - `/explain` - Get an explanation of code snippets
 - `/improve` - Improve or rewrite text
 - `/diagram` - Generate a diagram from text description
@@ -69,7 +69,7 @@ Sai is your versatile multi-model AI assistant that seamlessly integrates with y
 
 ### Global Shortcuts
 
-- **Ask GPT** - Quick access to GPT assistance
+- **Ask Sai** - Quick access to Sai assistance
 - **Writing Assistant** - Get help with writing and editing
 - **Summarize Text** - Create concise summaries of content
 - **Simplify Code** - Refactor and improve code snippets

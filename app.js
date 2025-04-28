@@ -16,8 +16,8 @@ const {
   handleSummarizeShortcut,
   handleTextModal,
   handleAskCommand,
-  handleAskGPTModal,
-  handleAskGPTShortcut,
+  handleAskModal,
+  handleAskShortcut,
 } = require("./handlers/text-handlers");
 
 const { handleDiagramCommand } = require("./handlers/diagram-handlers");
@@ -163,7 +163,7 @@ app.view("analyze_file_modal", async ({ ack, body, view, client }) => {
 
 // Handle shortcuts
 app.shortcut("ask_shortcut", async ({ shortcut, ack, client }) => {
-  await handleAskGPTShortcut({ shortcut, ack, client });
+  await handleAskShortcut({ shortcut, ack, client });
 });
 
 // Register shortcut handlers
@@ -189,7 +189,7 @@ app.shortcut("summarize_text_shortcut", async ({ shortcut, ack, client }) => {
 
 // Handle modal submissions
 app.view("ask_modal", async ({ ack, body, view, client }) => {
-  await handleAskGPTModal({ ack, body, view, client });
+  await handleAskModal({ ack, body, view, client });
 });
 
 // Register modal submission handlers

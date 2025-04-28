@@ -50,7 +50,7 @@
     "slash_commands": [
       {
         "command": "/ask",
-        "description": "Ask GPT any question directly",
+        "description": "Ask Sai any question directly",
         "usage_hint": "[your question here]",
         "should_escape": false
       },
