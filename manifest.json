@@ -17,10 +17,10 @@
     },
     "shortcuts": [
       {
-        "name": "Ask GPT",
+        "name": "Ask",
         "type": "global",
-        "callback_id": "ask_gpt_shortcut",
-        "description": "Quick access to GPT assistance - ask questions, get explanations, or help with any task directly in a private conversation"
+        "callback_id": "ask_shortcut",
+        "description": "Quick access to AI assistance - ask questions, get explanations, or help with any task directly in a private conversation"
       },
       {
         "name": "Writing Assistant",

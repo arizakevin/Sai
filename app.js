@@ -162,7 +162,7 @@ app.view("analyze_file_modal", async ({ ack, body, view, client }) => {
 });
 
 // Handle shortcuts
-app.shortcut("ask_gpt_shortcut", async ({ shortcut, ack, client }) => {
+app.shortcut("ask_shortcut", async ({ shortcut, ack, client }) => {
   await handleAskGPTShortcut({ shortcut, ack, client });
 });
 
@@ -188,7 +188,7 @@ app.shortcut("summarize_text_shortcut", async ({ shortcut, ack, client }) => {
 });
 
 // Handle modal submissions
-app.view("ask_gpt_modal", async ({ ack, body, view, client }) => {
+app.view("ask_modal", async ({ ack, body, view, client }) => {
   await handleAskGPTModal({ ack, body, view, client });
 });
 

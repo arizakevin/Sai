@@ -654,7 +654,7 @@ async function handleAskCommand({ command, ack, respond }) {
 }
 
 // Handle ask GPT modal submission
-async function handleAskGPTModal({ ack, body, view, client }) {
+async function handleAskModal({ ack, body, view, client }) {
   try {
     await ack();
     const question = view.state.values.question_block.question.value;
@@ -689,14 +689,14 @@ async function handleAskGPTModal({ ack, body, view, client }) {
 }
 
 // Handle ask GPT shortcut
-async function handleAskGPTShortcut({ shortcut, ack, client }) {
+async function handleAskShortcut({ shortcut, ack, client }) {
   try {
     await ack();
     await client.views.open({
       trigger_id: shortcut.trigger_id,
       view: {
         type: "modal",
-        callback_id: "ask_gpt_modal",
+        callback_id: "ask_modal",
         title: {
           type: "plain_text",
           text: "Ask GPT",
@@ -738,6 +738,6 @@ module.exports = {
   handleTextModal,
   handleRewriteShortcut,
   handleAskCommand,
-  handleAskGPTModal,
-  handleAskGPTShortcut,
+  handleAskModal,
+  handleAskShortcut,
 };
